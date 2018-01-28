@@ -31,6 +31,7 @@ class DebugApp : App() {
     private fun setupDebot() {
         val builder = DebotStrategyBuilder.Builder()
                 .registerMenu("Send Notification", NotificationDebotStrategy())
+                .registerMenu("Clear Image Cache", ClearImageCacheDebotStrategy())
                 .build()
 
         DebotConfigurator.configureWithCustomizedMenu(builder.strategyList)
